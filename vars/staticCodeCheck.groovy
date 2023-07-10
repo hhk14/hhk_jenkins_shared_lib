@@ -1,5 +1,8 @@
 def call(String sonarToken){
+    withSonarQubeEnv(credentialsId: sonarToken ) {
+        sh 'mvn  clean package sonar:sonar'
+    }
      
-    sh 'mvn  clean package sonar:sonar mvn -Dsonar.token="${sonarToken}"'
+    
 
 }
