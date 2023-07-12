@@ -1,3 +1,3 @@
 def call(){
-    sh "clean org.pitest:pitest-maven:mutationCoverage"
+    sh " mvn org.pitest:pitest-maven:mutationCoverage"
 }
